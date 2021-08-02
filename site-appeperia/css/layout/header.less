@@ -1,0 +1,39 @@
+/** Header **/
+header {
+    border-top: 5px solid @cor-padrao;
+    background: fade(@cor-auxiliar, 80);
+    height: 90px;
+    width: 100%;
+    position: absolute;
+  }
+  
+  header .container {
+    position: relative;
+  }
+  
+  .menu-principal {
+    position: absolute;
+    right: 0;
+    top: -.5em;
+    font-size: 1.2em;
+    font-weight: lighter;
+  
+  //aqui vamos deixar tudo referente ao menu-principal, mantendo normalmente o código no CSS e facilitando pra alterar
+    ul {
+      padding-left: 0;
+    }
+  
+    li {
+      display: inline-block;
+      width: 5em;
+    }
+  
+    a {
+      color: @cor-branca;
+      text-decoration: none;
+  
+      &:hover { //& comercial mostra no CSS apenas a sequencia correta = a:hover filho de a filho de menu-principal
+        text-decoration: underline;
+      }
+    }
+  }
